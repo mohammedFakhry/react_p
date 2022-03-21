@@ -1,0 +1,10 @@
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: -3px !important;
+}
+
+.card-img-container{
+    background: -webkit-radial-gradient( #000b76, #000c76ce, #000b76 ) ;
+    transform: rotate(2deg) scaleX(1.1);
+    transform-origin: left top;
+}

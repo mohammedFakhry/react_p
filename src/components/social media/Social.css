@@ -1,0 +1,28 @@
+i{
+    cursor: pointer !important;
+    transition: all ease-in-out .8s;
+}
+
+i:hover:before{
+    transition: all ease-in-out .6s;
+}
+
+.la-facebook:hover:before{
+    color: #0051ff;
+}
+.la-pinterest:hover:before{
+    color:  #c8232c;
+}
+.la-whatsapp:hover:before{
+    color: #25d366;
+}
+.la-twitter:hover:before{
+    color: #00acee;
+}
+.la-instagram:hover:before{
+    color: wheat;
+    background: linear-gradient(to right bottom, #515BD4, #8134AF, #DD2A7B, #FEDA77, #F58529);
+}
+.la-linkedin:hover:before{
+    color:  #0e76a8;
+}

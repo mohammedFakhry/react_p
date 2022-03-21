@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import NavBar from './components/NavBar/';
+import { Container } from 'react-bootstrap';
+import SocialMedia from './components/social media/';
+import Footer from './components/Footer/';
+import Contact from './components/Contact';
+import Index from './components/Index';
+import Error from './components/Error';
+
+import "swiper/css/bundle";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Loading from './components/Loading';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
+  return ( 
+    isLoading? <Loading />:
+    <BrowserRouter>
+      <NavBar />
+      <Container>
+        <Routes>
+          <Route exact path="/" element={<Index />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </Container>
+        <SocialMedia />
+        <Footer />
+    </BrowserRouter>
   );
 }
 

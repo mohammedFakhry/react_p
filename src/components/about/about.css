@@ -1,0 +1,9 @@
+.about-info section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 3px;
+    height: 100%;
+    background: -webkit-linear-gradient(top, #2a2a72, #232528);
+}
